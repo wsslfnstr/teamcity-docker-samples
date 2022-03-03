@@ -35,7 +35,7 @@ services:
       - db
 
   teamcity-agent-1:
-    image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}-linux-sudo
+    image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
     restart: always
     privileged: true
     volumes:
@@ -43,7 +43,7 @@ services:
     environment:
       - DOCKER_IN_DOCKER=start
   teamcity-agent-2:
-    image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}-linux-sudo
+    image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
     restart: always
     privileged: true
     volumes:
