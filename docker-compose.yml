@@ -33,7 +33,7 @@ services:
       - ./teamcity-server-logs:/opt/teamcity/logs
     depends_on:
       - db
-
+ 
   teamcity-agent-1:
     image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
     restart: always

@@ -43,7 +43,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - DOCKER_IN_DOCKER=start
-      - NAME=AGENT_1
+      - AGENT_NAME=AGENT_1
 
   teamcity-agent-2:
     image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
@@ -54,7 +54,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - DOCKER_IN_DOCKER=start
-      - NAME=AGENT_2
+      - AGENT_NAME=AGENT_2
 
   teamcity-agent-3:
     image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
@@ -65,7 +65,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - DOCKER_IN_DOCKER=start
-      - NAME=AGENT_3
+      - AGENT_NAME=AGENT_3
       
   teamcity-agent-4:
     image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
@@ -76,7 +76,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - DOCKER_IN_DOCKER=start
-      - NAME=AGENT_4
+      - AGENT_NAME=AGENT_4
       
   teamcity-agent-5:
     image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
@@ -87,4 +87,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - DOCKER_IN_DOCKER=start
-      - NAME=AGENT_5
+      - AGENT_NAME=AGENT_5
