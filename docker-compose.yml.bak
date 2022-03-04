@@ -41,35 +41,6 @@ services:
     volumes:
       - ./agents/conf:/data/teamcity_agent/conf
       - /var/run/docker.sock:/var/run/docker.sock
-
-  teamcity-agent-2:
-    image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
-    restart: always
-    privileged: true
-    volumes:
-      - ./agents/conf:/data/teamcity_agent/conf
-      - /var/run/docker.sock:/var/run/docker.sock
-
-  teamcity-agent-3:
-    image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
-    restart: always
-    privileged: true
-    volumes:
-      - ./agents/conf:/data/teamcity_agent/conf
-      - /var/run/docker.sock:/var/run/docker.sock
-      
-  teamcity-agent-4:
-    image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
-    restart: always
-    privileged: true
-    volumes:
-      - ./agents/conf:/data/teamcity_agent/conf
-      - /var/run/docker.sock:/var/run/docker.sock
-      
-  teamcity-agent-5:
-    image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
-    restart: always
-    privileged: true
-    volumes:
-      - ./agents/conf:/data/teamcity_agent/conf
-      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+        - DOCKER_IN_DOCKER=start
+        - AGENT_NAME=Agent_1

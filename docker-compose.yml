@@ -40,7 +40,6 @@ services:
     privileged: true
     volumes:
       - ./agents/conf:/data/teamcity_agent/conf
-      - /var/run/docker.sock:/var/run/docker.sock
     environment:
         - DOCKER_IN_DOCKER=start
         - AGENT_NAME=Agent_1
